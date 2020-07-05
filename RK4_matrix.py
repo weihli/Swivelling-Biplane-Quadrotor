@@ -62,27 +62,3 @@ def RK4(f, y0, t0, tf, h, n):        #h is the time step between two instants
     x = y[:,-1]
     # print(k1)
     return x, time
-
-
-
-# Finds value of y for a given x using step size h 
-# and initial value y0 at t0. 
-# def RK4(f, t0, y0, x, h): 
-#     # Count number of iterations using step size or 
-#     # step height h 
-#     n = (int)((x - t0)/h)  
-#     # Iterate for number of iterations 
-#     y = y0 
-#     for i in range(1, n + 1): 
-#         "Apply Runge Kutta Formulas to find next value of y"
-#         k1 = h * f(t0, y) 
-#         k2 = h * f(t0 + 0.5 * h, y + 0.5 * k1) 
-#         k3 = h * f(t0 + 0.5 * h, y + 0.5 * k2) 
-#         k4 = h * f(t0 + h, y + k3) 
-  
-#         # Update next value of y 
-#         y = y + (1.0 / 6.0)*(k1 + 2 * k2 + 2 * k3 + k4) 
-  
-#         # Update next value of x 
-#         t0 = t0 + h 
-#     return y 
